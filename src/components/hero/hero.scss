@@ -1,0 +1,114 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero-container {
+    height: 100vh;
+    padding: 5rem;
+    .hero-wrapper {
+        .hero-text{
+            margin-top: 70px;
+            h1{
+                font-size: 4rem;
+                font-weight: bolder;
+                font-family: $primary-font;
+            }
+            p {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $gray;
+                padding-bottom: 20px;
+                padding: 10px;
+            }
+            span {
+                @include button(30px);
+                padding: .6rem 2rem;
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+        }
+    
+        .hero-img {
+            img {
+                width: 700px;
+            }
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width: 1250px) {
+    .hero-container {
+        .hero-wrapper { 
+            .hero-text{
+                h1{
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+                span {
+                    padding: .6rem 2rem;
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                }
+            }
+            .hero-img {
+                img {
+                    width: 600px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px){
+    .hero-container {
+        height: 100%;
+        margin-bottom: 50px;
+        .hero-wrapper {
+            align-items: center;    
+            flex-direction: column-reverse;
+            .hero-text{
+                margin-top: 20px;
+                text-align: center;
+                h1{
+                    font-size:2.8rem;
+                }
+                p {
+                    font-size: 1.1rem;
+                }
+                span {
+                    padding: .6rem 2rem;
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                }
+            }
+            .hero-img {
+                margin-top: -70px;
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .hero-container {
+        .hero-wrapper {
+            align-items: center;    
+            flex-direction: column-reverse;
+            .hero-text{
+                text-align: center;
+                span {
+                    padding: .6rem 2rem;
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.menu-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    background-color: $dark-violet;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+
+    .menu-links {
+        padding: 0;
+        li{
+            cursor: pointer;
+            margin-bottom: 30px;
+
+            &:hover {
+                color: $gray;
+            }
+        }
+    }
+
+    .menu-signuplogin{
+        padding: 0;
+        margin: 0;
+        
+        li:nth-child(1){
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            &:hover{
+                color: $gray;
+            }
+        }
+
+        li:nth-child(2){
+            @include button(20px);
+            padding: 10px 20px;
+            margin-bottom: 0;
+        }
+
+    }
+}

@@ -1,0 +1,96 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+
+.stats-container{
+    height: 100%;
+    padding-bottom: 6rem;
+    @include flex(column, flex-start);
+    background-color: rgb(241, 239, 239);
+
+    .stats-title{
+        text-align: center;
+        margin-top: 6rem;
+        width: 50%;
+
+        h1{
+            font-weight: 900;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 1.4rem;
+            color: $gray;
+        }
+    }
+    .stats-cards {
+        margin-top: 5rem;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 6px;
+            background-color: $cyan;
+            z-index: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .stats-container{
+        .stats-cards { 
+            &::after{
+                content: '';
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .stats-container{
+        .stats-title{ 
+            width: 70%;
+        } 
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .stats-container{
+        .stats-title{ 
+            width: 90%;
+            p{
+                font-size: 20px;
+            }
+        } 
+    }
+}
+
+@media screen and (max-width: 742px) {
+    .stats-container{
+        .stats-cards { 
+            &::after{
+                content: '';
+                width: 6px;
+                height: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .stats-container{
+        .stats-title{ 
+            p{
+                font-size: 1rem;
+            }
+        } 
+    }
+
+}

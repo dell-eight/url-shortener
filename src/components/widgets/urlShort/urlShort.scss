@@ -1,0 +1,116 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+
+.shorturl-container{
+    @include flex(row, space-between);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 20px;
+    padding: 1.2rem;
+    width: 70%;
+    overflow: hidden;
+
+        #url{
+            font-size: 1rem ;
+        }
+    .shorturl-result{
+
+        #shortUrl{
+            color: $cyan;
+            font-size: 1rem;
+        }
+    
+        #btn-copy{
+            @include button(5px);
+            font-size: .9rem;
+            border: none;
+            padding: 7px 30px;
+            margin-left: 20px;
+            text-align: center
+        }
+
+
+        #copied{
+            @include button(5px);
+            background-color: $dark-violet !important;
+            font-size: .9rem;
+            border: none;
+            padding: 7px 30px;
+            margin-left: 20px;
+            text-align: center
+        }
+    }
+
+    #alert {
+        position: fixed;
+        bottom: 10px;
+        right:10px;
+        z-index: 1000;
+    }
+        
+}
+
+@media screen and (max-width: 992px) {
+    .shorturl-container{
+        width: 80%;
+        padding: 1rem;
+
+        #url{
+            font-size: .9rem ;
+        }
+        .shorturl-result{
+            #shortUrl{
+                font-size: .9rem;
+            }
+            #btn-copy{
+                font-size: .8rem;
+            }
+            #copied{
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px ){
+    .shorturl-container{
+        @include flex(column, center);
+        width: 90%;
+        text-align: center;
+        
+        #url{
+            position: relative;
+            width: 100%;
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -9px;
+                width: 100%;
+                height: 1px;
+                background-color: $gray;
+                opacity: .4;
+            }
+        }
+
+        .shorturl-result{
+            @include flex(column, center);
+            width: 100%;
+            #shortUrl{
+                margin: 15px 0;
+            }
+            #btn-copy{
+                margin-left: 0;
+                width: 100%;
+            }
+            #copied{
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    }
+}

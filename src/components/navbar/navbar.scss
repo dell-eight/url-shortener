@@ -1,0 +1,79 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.navbar-container {
+    margin-top: 20px ;
+    padding: 10px;
+    font-weight: 700;
+    color: $gray;
+    img {
+        cursor: pointer;
+    }
+    .links {
+        margin-top: 15px;
+        margin-right: 30px;
+        li {
+            margin-right: 40px;
+            cursor: pointer;
+
+            &:hover{
+                color: $very-dark-violet
+            }
+        }
+    }
+    .signupLogin {
+        margin-top: 13px;
+        gap: 30px;
+        
+        li:nth-child(1) {
+            cursor: pointer;
+            &:hover{
+                color: $very-dark-violet
+            }
+        }
+
+        li:nth-child(2){
+            @include button(70px);
+            padding: 8px 20px;
+
+        }
+    }
+    .hamburger-menu {
+        font-size: 35px;
+        margin-top: -5px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .navbar-container {
+        .links {
+            margin-left: 20px;
+            li {
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-container {
+        margin: 10px 0px;
+        .links {
+            display: none;
+        }
+
+        .signupLogin {
+            display: none;
+        }
+
+        .hamburger-menu {
+            display: block;
+        }
+    
+    }
+}
+

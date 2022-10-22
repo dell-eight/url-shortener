@@ -1,0 +1,21 @@
+@import './variables';
+
+@mixin flex($direction, $justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin button($radius) {
+    border-radius: $radius;
+    background-color: $cyan;
+    color: whitesmoke;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $light-cyan;
+    }
+}
+
+

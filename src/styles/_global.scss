@@ -1,0 +1,34 @@
+@import './variables';
+@import './mixins';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+
+body{
+  color: $very-dark-violet;
+  overflow-x: hidden;
+}
+
+li{
+  list-style: none;
+}
+
+.flex-center{
+  @include flex(row, center);
+}
+
+.flex-start{
+  @include flex(row, flex-start);
+}
+
+.flex-end{
+  @include flex(row, flex-end);
+}
+
+.flex-between{
+  @include flex(row, space-between);
+}

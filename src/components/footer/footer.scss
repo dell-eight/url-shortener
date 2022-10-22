@@ -1,0 +1,135 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.footer-container {
+    height: 100%;
+
+    .get-started{
+        background-color: $dark-violet;
+        background-image: url('../../assets/bg-boost-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding: 3rem;
+
+        h1{
+            font-weight: 900;
+            color: white;
+            margin-bottom: 30px
+        }
+
+        span{
+            @include button(30px);
+            padding: .6rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+    }
+
+    .footer-wrapper {
+        @include flex(row, center);
+        align-items: flex-start !important;
+        background-color: $very-dark-violet;
+        padding: 8rem; 
+
+        .links {
+            margin: 0;
+            padding: 0;
+            li:nth-child(1){
+                color: white;
+                font-size: 15px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                cursor: default;
+    
+                &:hover {
+                    color: white;
+                } 
+            }
+            li{
+                color: $gray;
+                font-size: 13px;
+                margin-bottom: 10px;
+                cursor: pointer;
+    
+                &:hover{
+                    color: $cyan;
+                }
+            }
+        }
+        
+
+        .social-icons {
+            @include flex(row, center);
+            font-size: 1.4rem;
+            color: white;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            li {
+                cursor: pointer;
+                &:hover {
+                    color: $cyan;
+
+                }
+            }
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 991px){
+    .footer-container { 
+        .footer-wrapper { 
+            padding: 3rem;
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+
+    .footer-container {
+        .get-started{
+            background-image: url('../../assets/bg-boost-mobile.svg');
+            padding: 5rem 1.3rem ;
+        
+            h1{ 
+                margin-bottom: 20px;
+            }
+        }
+
+        .footer-wrapper {
+            @include flex(column, center);
+            align-items: center !important;
+            text-align: center;
+            padding: 5rem; 
+
+            img {
+                align-self: center;
+                margin-bottom: 50px;
+            }
+
+            .links {
+                margin-top: 40px;
+                li:nth-child(1){
+                    font-size: 1.1rem;
+                }
+                li{
+                    font-size: .9rem;
+                }
+            }
+            .social-icons {
+                font-size: 1.8rem;
+                margin-top: 30px;
+                
+            }
+            
+        }
+
+    }
+    
+}
