@@ -6,7 +6,7 @@
     padding: 5rem;
     .hero-wrapper {
         .hero-text{
-            margin-top: 70px;
+            margin-top: 30px;
             h1{
                 font-size: 4rem;
                 font-weight: bolder;
@@ -17,7 +17,7 @@
                 font-weight: 500;
                 color: $gray;
                 padding-bottom: 20px;
-                padding: 10px;
+                white-space: pre;
             }
             span {
                 @include button(30px);
@@ -28,6 +28,7 @@
         }
     
         .hero-img {
+            margin-top: -40px;
             img {
                 width: 700px;
             }
@@ -75,9 +76,11 @@
                 text-align: center;
                 h1{
                     font-size:2.8rem;
+                    white-space: normal;
                 }
                 p {
                     font-size: 1.1rem;
+                    white-space: normal;
                 }
                 span {
                     padding: .6rem 2rem;

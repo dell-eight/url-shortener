@@ -6,10 +6,7 @@ import { Row } from 'react-bootstrap/';
 import { cards } from '../constants';
 
 
-
 const Statistics = () => {
-
-
 
   return (
     <div className='stats-container'>

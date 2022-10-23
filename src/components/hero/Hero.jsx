@@ -10,9 +10,8 @@ const Hero = () => {
       <Row className='hero-wrapper '>
         <Col className='col-lg-7 col-md-9'> 
           <div className='hero-text'>
-            <h1>More than just shorten links</h1>
-            <p>Build your brand's recognition and get detailed 
-              insights on how your links are performing.</p>
+            <h1>{`More than just\nshorten links`}</h1>
+            <p>{`Build your brand's recognition and get detailed\ninsights on how your links are performing.`}</p>
             <span>Get Started</span>
           </div>
         </Col>
