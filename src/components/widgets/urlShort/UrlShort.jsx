@@ -23,7 +23,7 @@ const UrlShort = ({ url, shortUrl }) => {
       <div className='shorturl-result'>
         <span id='shortUrl'>{shortUrl}</span>
         <span id={isCopied ? 'copied' : 'btn-copy'} onClick={copyText}>{isCopied ? 'Copied!' : 'Copy'}</span>
-        {isCopied && <Alert id='alert' variant='success'>URL is has been copied!</Alert>}
+        {isCopied && <Alert id='alert' variant='success'>URL has been copied!</Alert>}
       </div>
     </div>
   )
